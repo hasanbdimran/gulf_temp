@@ -58,7 +58,7 @@ var bounds = new L.LatLngBounds(
     new L.LatLng(22.896634, -87.769914));
 map.fitBounds(bounds);
 
-var urlPrefix = "/images/"
+var urlPrefix = "/gulf_temp/images/"
 
 var url = urlPrefix+dateTimes[0]+".png"
 
