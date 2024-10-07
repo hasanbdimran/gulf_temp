@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Gulf of Mexico</title>
+	
+        <!-- Leaflet CSS and JS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+    
+        <!-- Leaflet.TimeDimension Plugin -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.min.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+
+	
+</head>
+<body>
+
+
+        <div id="leafletmap"></div>
+        <div id="map"></div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="1" class="slider" id="slider"><label id="sliderLabel"></label>
+        </div>
+        <button id="play">Play</button><button id="stop">Stop</button>
+
+
+        <script src="map.js"></script>
+</body>
+</html>
