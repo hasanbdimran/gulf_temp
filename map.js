@@ -58,7 +58,7 @@ var bounds = new L.LatLngBounds(
     new L.LatLng(22.896634, -87.769914));
 map.fitBounds(bounds);
 
-var urlPrefix = "/gulf_temp/images/"
+var urlPrefix = "/images/"
 
 var url = urlPrefix+dateTimes[0]+".png"
 
@@ -122,3 +122,33 @@ slider.oninput = function() {
   
   //hidding the stop button by default
   document.getElementById('stop').style.display = "none";
+
+  //Colorbar manupulation
+  function getColor(d) {
+    return d > 38 ? '#E8FA5B' :
+           d > 35 ? '#FCA63C' :
+           d > 32 ? '#D66C6C' :
+           d > 29 ? '#8B538D' :
+           d > 26 ? '#40349F' :
+                    '#042333';
+}
+
+var legend = L.control({position: 'bottomleft'});
+
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [23, 28, 30, 32, 35, 38],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
