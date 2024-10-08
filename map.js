@@ -101,7 +101,7 @@ slider.oninput = function() {
           //setting the url of the overlay
           imageOverlay.setUrl(urlPrefix+dateTimes[Number(val)-1]+".png")
   
-      }, 500);
+      }, 100);
   }
   
   document.getElementById('play').onclick = function(e){
