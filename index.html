@@ -9,8 +9,29 @@
 	
         <!-- Leaflet CSS and JS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-        <<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
+
+
+        <script src="leaflet-geotiff.js" type="text/javascript"></script>
+        <script src="leaflet-geotiff-plotty.js" type="text/javascript"></script>
+        <script src="leaflet-geotiff-rgb.js" type="text/javascript"></script>
+        <script src="leaflet-geotiff-vector-arrows.js" type="text/javascript"></script>
+        <script src="chroma.min.js"></script>
+
+
+
+         <!--deps-->
+        <script src="https://unpkg.com/geotiff@1.0.0-beta.13/dist-browser/geotiff.js"></script>
+        <script src="https://unpkg.com/plotty@0.4.1/dist/plotty.js"></script>
+
+        <!--the plugin-->
+        <script src="https://unpkg.com/leaflet-geotiff-2@0.2.5/dist/leaflet-geotiff.js"></script>
+        <script src="https://unpkg.com/leaflet-geotiff-2@0.2.5/dist/leaflet-geotiff-plotty.js"></script>
+        <script src="https://unpkg.com/leaflet-geotiff-2@0.2.5/dist/leaflet-geotiff-vector-arrows.js"></script>
+
+        <!--demo stuff-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     
         <!-- Leaflet.TimeDimension Plugin -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
@@ -27,9 +48,11 @@
         <div id="leafletmap"></div>
         <div id="map"></div>
         <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="1" class="slider" id="slider"><label id="sliderLabel"></label>
+                <button id="play">Play</button>
+                <button id="stop">Stop</button>
+                <input type="range" min="1" max="100" value="1" class="slider" id="slider"><label id="sliderLabel"></label>
         </div>
-        <button id="play">Play</button><button id="stop">Stop</button>
+        
 
 
         <script src="map.js"></script>
